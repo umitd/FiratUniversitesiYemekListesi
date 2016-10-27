@@ -6,9 +6,6 @@ page = Nokogiri::HTML(open("http://uevi.firat.edu.tr/"))
 
 list = page.css("div.views-field-body p")
 
-date = list.css("strong")
-
-
 list.each do |i|
 
 	puts "|" + i.text.center(25) +"|" if i.text != "\u00a0" # Check for &nbsp HTML
